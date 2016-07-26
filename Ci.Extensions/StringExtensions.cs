@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Ci.Extensions
 {
     /// <summary>
-    /// StringExtensions
+    /// String Extensions
     /// </summary>
     public static class StringExtensions
     {

@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4FF838CB-AC69-4D93-B399-20E38E09EC55}</ProjectGuid>
+    <ProjectGuid>{9B2EC6B7-187D-4C69-96A0-5B9FE7380A1B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Ci.Extensions</RootNamespace>
-    <AssemblyName>Ci.Extensions</AssemblyName>
+    <RootNamespace>Ci.Extensions.Web</RootNamespace>
+    <AssemblyName>Ci.Extensions.Web</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -32,7 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,10 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ExtensionMethodSetting.cs" />
-    <Compile Include="ImageExtensions.cs" />
-    <Compile Include="ObjectExtensions.cs" />
-    <Compile Include="StringExtensions.cs" />
+    <Compile Include="CookieExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
