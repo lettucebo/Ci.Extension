@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>Ci.Extensions</id>
-        <version>1.0.0</version>
+        <version>1.0.2</version>
         <title>Ci.Extensions</title>
         <authors>Money</authors>
         <licenseUrl>http://opensource.org/licenses/Apache-2.0</licenseUrl>
@@ -19,8 +19,5 @@
     </metadata>
     <files>
         <file src="lib\Ci.Extensions.dll" target="lib\Ci.Extensions.dll" />
-        <file src="tools\init.ps1" target="tools\init.ps1" />
-        <file src="tools\install.ps1" target="tools\install.ps1" />
-        <file src="tools\uninstall.ps1" target="tools\uninstall.ps1" />
     </files>
 </package>

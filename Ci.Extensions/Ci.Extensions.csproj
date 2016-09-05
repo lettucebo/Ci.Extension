@@ -41,7 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EnumExtensions.cs" />
     <Compile Include="ExtensionMethodSetting.cs" />
+    <Compile Include="NullableGuidExtensions.cs" />
+    <Compile Include="GuidExtensions.cs" />
     <Compile Include="ImageExtensions.cs" />
     <Compile Include="ObjectExtensions.cs" />
     <Compile Include="StringExtensions.cs" />
