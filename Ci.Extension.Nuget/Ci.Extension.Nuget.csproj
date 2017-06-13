@@ -60,7 +60,8 @@
     <Folder Include="src\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="lib\Ci.Extensions.dll" />
+    <Content Include="lib\Ci.Extension.dll" />
+    <Content Include="lib\Ci.Extension.pdb" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
