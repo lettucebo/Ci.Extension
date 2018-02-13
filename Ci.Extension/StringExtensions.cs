@@ -31,54 +31,13 @@ namespace Ci.Extension
         }
 
         /// <summary>
-        /// 將字串進行SHA256雜湊運算
+        /// check string is numeric or not
         /// </summary>
-        /// <param name="str">The string.</param>
-        /// <returns>雜湊結果</returns>
-        public static string ToSha256(this string str)
+        /// <param name="input"></param>
+        /// <returns></returns>
+        public static bool IsNumeric(this string input)
         {
-            SHA256 sha256 = new SHA256CryptoServiceProvider(); // 建立一個SHA256
-            var source = Encoding.Default.GetBytes(str); // 將字串轉為Byte[]
-            var crypto = sha256.ComputeHash(source); // 進行SHA256加密
-            var result = Convert.ToBase64String(crypto); // 把加密後的字串從Byte[]轉為字串
-            return result; // 輸出結果
-        }
-
-        /// <summary>
-        /// 將字串進行SHA256雜湊運算
-        /// </summary>
-        /// <param name="str">要雜湊的原始字串</param>
-        /// <param name="salt">將原始字串複雜化的「鹽」</param>
-        /// <returns>雜湊結果</returns>
-        public static string ToSha256(this string str, string salt)
-        {
-            return (str + salt).ToSha256();
-        }
-
-        /// <summary>
-        /// 將字串進行MD5雜湊運算
-        /// </summary>
-        /// <param name="str">The string.</param>
-        /// <returns>雜湊結果</returns>
-        public static string ToMd5(this string str)
-        {
-            // create new instance of md5
-            var md5 = MD5.Create();
-
-            // convert the input text to array of bytes
-            var hashData = md5.ComputeHash(Encoding.Default.GetBytes(str));
-
-            // create new instance of StringBuilder to save hashed data
-            var returnValue = new StringBuilder();
-
-            // loop for each byte and add it to StringBuilder
-            foreach (var t in hashData)
-            {
-                returnValue.Append(t.ToString());
-            }
-
-            // return hexadecimal string
-            return returnValue.ToString();
+            return int.TryParse(input, out int number);
         }
 
         /// <summary>
@@ -208,76 +167,15 @@ namespace Ci.Extension
         }
 
         /// <summary>
-        /// AES區塊加密
+        /// SubString and check  length is enough, if not retrun full string
         /// </summary>
-        /// <param name="originalString">要加密的字串</param>
-        /// <param name="key">金鑰</param>
-        /// <returns>加密結果，執行失敗時回傳Null</returns>
-        public static string ToAesEncryptBase64(this string originalString, string key)
+        /// <param name="source"></param>
+        /// <param name="startIndex"></param>
+        /// <param name="length"></param>
+        /// <returns></returns>
+        public static string SubStringLength(this string source, int startIndex, int length)
         {
-            string encrypt = null;
-            try
-            {
-                var aes = new AesCryptoServiceProvider();
-                var md5 = new MD5CryptoServiceProvider();
-                var sha256 = new SHA256CryptoServiceProvider();
-                var keyBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(key));
-                var iv = md5.ComputeHash(Encoding.UTF8.GetBytes(key));
-                aes.Key = keyBytes;
-                aes.IV = iv;
-
-                var dataByteArray = Encoding.UTF8.GetBytes(originalString);
-                using (var ms = new MemoryStream())
-                using (var cs = new CryptoStream(ms, aes.CreateEncryptor(), CryptoStreamMode.Write))
-                {
-                    cs.Write(dataByteArray, 0, dataByteArray.Length);
-                    cs.FlushFinalBlock();
-                    encrypt = Convert.ToBase64String(ms.ToArray());
-                }
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-            }
-            return encrypt;
-        }
-
-        /// <summary>
-        /// AES區塊解密
-        /// </summary>
-        /// <param name="originalString">要解密的字串</param>
-        /// <param name="key">金鑰</param>
-        /// <returns>解密結果，執行失敗時回傳Null</returns>
-        public static string ToAesDecryptBase64(this string originalString, string key)
-        {
-            string decrypt = null;
-            try
-            {
-                var aes = new AesCryptoServiceProvider();
-                var md5 = new MD5CryptoServiceProvider();
-                var sha256 = new SHA256CryptoServiceProvider();
-                var keyBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(key));
-                var iv = md5.ComputeHash(Encoding.UTF8.GetBytes(key));
-                aes.Key = keyBytes;
-                aes.IV = iv;
-
-                var dataByteArray = Convert.FromBase64String(originalString);
-                using (var ms = new MemoryStream())
-                {
-                    using (var cs = new CryptoStream(ms, aes.CreateDecryptor(), CryptoStreamMode.Write))
-                    {
-                        cs.Write(dataByteArray, 0, dataByteArray.Length);
-                        cs.FlushFinalBlock();
-                        decrypt = Encoding.UTF8.GetString(ms.ToArray());
-                    }
-                }
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-            }
-
-            return decrypt;
+            return source.Substring(startIndex, Math.Min(source.Length - startIndex, length));
         }
     }
 }
