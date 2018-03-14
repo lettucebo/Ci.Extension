@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>Ci.Extension.NetCore</AssemblyName>
+    <Authors>MoneyYu</Authors>
+    <Description>Basic extension method.</Description>
+    <PackageIconUrl>https://i.imgur.com/3xZ4Cdx.png</PackageIconUrl>
+    <PackageProjectUrl>https://github.com/lettucebo/Ci.Extension</PackageProjectUrl>
+    <PackageTags>extension,c#,tool</PackageTags>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.ComponentModel.Annotations" Version="4.4.1" />
+  </ItemGroup>
+
+</Project>
