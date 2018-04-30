@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text.RegularExpressions;
 
-namespace Ci.Extension.NetCore
+namespace Ci.Extension.Core
 {
     /// <summary>
     /// String Extensions

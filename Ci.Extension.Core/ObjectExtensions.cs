@@ -1,4 +1,4 @@
-﻿namespace Ci.Extension.NetCore
+﻿namespace Ci.Extension.Core
 {
     public static class ObjectExtensions
     {

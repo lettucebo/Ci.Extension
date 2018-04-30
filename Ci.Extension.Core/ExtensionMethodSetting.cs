@@ -1,7 +1,7 @@
 ﻿using System.Globalization;
 using System.Text;
 
-namespace Ci.Extension.NetCore
+namespace Ci.Extension.Core
 {
     /// <summary>
     /// Allows developer to set default values for CultureInfo and Encoding
