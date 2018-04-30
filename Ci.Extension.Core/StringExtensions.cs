@@ -165,5 +165,18 @@ namespace Ci.Extension.Core
         {
             return source.Substring(startIndex, Math.Min(source.Length - startIndex, length));
         }
+
+        /// <summary>
+        /// Check input string is valid email format
+        /// </summary>
+        /// <param name="source"></param>
+        /// <returns></returns>
+        public static bool IsEmail(this string source)
+        {
+            return Regex.IsMatch(source,
+                @"^(?("")("".+?(?<!\\)""@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))" +
+                @"(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))$",
+                RegexOptions.IgnoreCase, TimeSpan.FromMilliseconds(250));
+        }
     }
 }
