@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
+using System.Linq;
 using System.Reflection;
 
-namespace Ci.Extension
+namespace Ci.Extension.Core
 {
     public static class IListExtensions
     {
