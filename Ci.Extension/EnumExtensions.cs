@@ -1,16 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Reflection;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Reflection;
 
-namespace Ci.Extensions
+namespace Ci.Extension
 {
-    using System.ComponentModel;
-    using System.Reflection;
-
     public static class EnumExtensions
     {
         /// <summary>
@@ -46,7 +41,7 @@ namespace Ci.Extensions
                        ?.Name
                    ?? value.ToString();
         }
-        
+
         /// <summary>
         /// Convert string to Enum by attritube
         /// </summary>
@@ -93,7 +88,7 @@ namespace Ci.Extensions
                 {
                     if (attribute.Name == value)
                     {
-                        return (T) field.GetValue(null);
+                        return (T)field.GetValue(null);
                     }
                 }
             }
@@ -112,7 +107,7 @@ namespace Ci.Extensions
                 {
                     if (attribute.Description == value)
                     {
-                        return (T) field.GetValue(null);
+                        return (T)field.GetValue(null);
                     }
                 }
             }

@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Globalization;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace Ci.Extensions
+namespace Ci.Extension
 {
-    using System.Globalization;
-
     /// <summary>
     /// Allows developer to set default values for CultureInfo and Encoding
     /// </summary>

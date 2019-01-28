@@ -1,14 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Drawing;
+using System.Drawing.Imaging;
 
-namespace Ci.Extensions
+namespace Ci.Extension
 {
-    using System.Drawing;
-    using System.Drawing.Imaging;
-
     public static class ImageExtensions
     {
         /// <summary>

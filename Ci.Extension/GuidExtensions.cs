@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Ci.Extensions
+namespace Ci.Extension
 {
     public static class GuidExtensions
     {
