@@ -38,7 +38,7 @@ namespace Ci.Extension
         }
 
         /// <summary>
-        /// 與<code>string.IsNullOrWhiteSpace()</code>相同，純粹為了Coding時可以順一點而寫的擴充
+        /// same as <code>string.IsNullOrWhiteSpace()</code>，純粹為了Coding時可以順一點而寫的擴充
         /// </summary>
         /// <param name="value">value</param>
         /// <returns>檢查結果</returns>
@@ -48,7 +48,7 @@ namespace Ci.Extension
         }
 
         /// <summary>
-        /// 與<code>string.IsNullOrWhiteSpace()</code>相同，純粹為了Coding時可以順一點而寫的擴充
+        /// same as <code>string.IsNullOrWhiteSpace()</code>，純粹為了Coding時可以順一點而寫的擴充
         /// </summary>
         /// <param name="value">value</param>
         /// <returns>IsNullOrWhiteSpace</returns>
@@ -58,7 +58,7 @@ namespace Ci.Extension
         }
 
         /// <summary>
-        /// 與<code>string.IsNullOrEmpty()</code>相同，純粹為了Coding時可以順一點而寫的擴充
+        /// same as <code>string.IsNullOrEmpty()</code>，純粹為了Coding時可以順一點而寫的擴充
         /// </summary>
         /// <param name="value">value</param>
         /// <returns>IsNullOrEmpty</returns>
