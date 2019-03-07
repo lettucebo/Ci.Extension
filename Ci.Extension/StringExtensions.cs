@@ -38,14 +38,13 @@ namespace Ci.Extension
         }
 
         /// <summary>
-        /// 是否有此值
+        /// 與<code>string.IsNullOrWhiteSpace()</code>相同，純粹為了Coding時可以順一點而寫的擴充
         /// </summary>
-        /// <param name="sourceValue">來源值</param>
-        /// <param name="value">檢查值</param>
+        /// <param name="value">value</param>
         /// <returns>檢查結果</returns>
-        public static bool HasValue(this int sourceValue, int value)
+        public static bool HasValue(this string value)
         {
-            return (value & sourceValue) == value;
+            return string.IsNullOrWhiteSpace(value);
         }
 
         /// <summary>
