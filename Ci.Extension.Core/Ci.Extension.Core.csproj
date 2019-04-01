@@ -9,6 +9,7 @@
     <PackageProjectUrl>https://github.com/lettucebo/Ci.Extension</PackageProjectUrl>
     <PackageTags>extension,c#,tool</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <LangVersion>7.3</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
