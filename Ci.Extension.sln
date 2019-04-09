@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27130.2027
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28729.10
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ci.Extension", "Ci.Extension\Ci.Extension.csproj", "{4FF838CB-AC69-4D93-B399-20E38E09EC55}"
 EndProject
@@ -13,7 +13,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ci.Extension.Core", "Ci.Ext
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ci.Extension.EntityFramework", "Ci.Extension.EntityFramework\Ci.Extension.EntityFramework.csproj", "{955FD8C3-2F72-4155-BF48-276081867B61}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Ci.Extension.ShareCode", "Ci.Extension.ShareCode\Ci.Extension.ShareCode.shproj", "{7E6795EA-BE76-4CDE-9A84-7F58F0CBE4EB}"
+EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Ci.Extension.ShareCode\Ci.Extension.ShareCode.projitems*{4ff838cb-ac69-4d93-b399-20e38e09ec55}*SharedItemsImports = 4
+		Ci.Extension.ShareCode\Ci.Extension.ShareCode.projitems*{7e6795ea-be76-4cde-9a84-7f58f0cbe4eb}*SharedItemsImports = 13
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU

@@ -8,12 +8,14 @@
     <PackageIconUrl>https://i.imgur.com/3xZ4Cdx.png</PackageIconUrl>
     <PackageProjectUrl>https://github.com/lettucebo/Ci.Extension</PackageProjectUrl>
     <PackageTags>extension,c#,tool</PackageTags>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <LangVersion>7.3</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="System.ComponentModel.Annotations" Version="4.1.0" />
   </ItemGroup>
+
+  <Import Project="..\Ci.Extension.ShareCode\Ci.Extension.ShareCode.projitems" Label="Shared" />
 
 </Project>

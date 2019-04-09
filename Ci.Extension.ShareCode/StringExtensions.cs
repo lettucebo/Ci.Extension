@@ -46,15 +46,6 @@ namespace Ci.Extension
         }
 
         /// <summary>
-        /// 取得當前文化特性名稱
-        /// </summary>
-        /// <returns>文化特性名稱</returns>
-        public static string CultureName()
-        {
-            return System.Threading.Thread.CurrentThread.CurrentUICulture.Name;
-        }
-
-        /// <summary>
         /// check string is numeric or not
         /// </summary>
         /// <param name="input"></param>
