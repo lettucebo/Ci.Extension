@@ -237,5 +237,16 @@ namespace Ci.Extension
                 @"(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))$",
                 RegexOptions.IgnoreCase, TimeSpan.FromMilliseconds(250));
         }
+
+        /// <summary>
+        /// Remove the specific string from source string
+        /// </summary>
+        /// <param name="source"></param>
+        /// <param name="removeStr"></param>
+        /// <returns></returns>
+        public static string Remove(this string source, string removeStr)
+        {
+            return source.Replace(removeStr, string.Empty);
+        }
     }
 }
