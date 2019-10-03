@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <AssemblyName>Ci.Extension.CoreApp</AssemblyName>
+    <Authors>MoneyYu</Authors>
+    <Description>Basic extension method.</Description>
+    <PackageIconUrl>https://i.imgur.com/3xZ4Cdx.png</PackageIconUrl>
+    <PackageProjectUrl>https://github.com/lettucebo/Ci.Extension</PackageProjectUrl>
+    <PackageTags>extension,c#,tool</PackageTags>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <LangVersion>7.3</LangVersion>
+    <RootNamespace>Ci.Extension.CoreApp</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.ComponentModel.Annotations" Version="4.1.0" />
+  </ItemGroup>
+
+  <Import Project="..\Ci.Extension.ShareCode\Ci.Extension.ShareCode.projitems" Label="Shared" />
+
+</Project>
