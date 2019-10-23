@@ -1,11 +1,11 @@
 ﻿using System;
-using Microsoft.AspNetCore.Mvc.Routing;
+using Microsoft.AspNetCore.Mvc;
 
-namespace Ci.Extension.AspNetCoreApp
+namespace Ci.Extension.AspNetCore
 {
     public static class UrlHelperExtension
     {
-        public static string AdaptContent(this UrlHelper url, string contentPath)
+        public static string AdaptContent(this IUrlHelper url, string contentPath)
         {
             if (contentPath.StartsWith("http"))
                 return contentPath;
