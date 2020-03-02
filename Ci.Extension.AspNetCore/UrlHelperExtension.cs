@@ -7,13 +7,16 @@ namespace Ci.Extension.AspNetCore
     {
         public static string AdaptContent(this IUrlHelper url, string contentPath)
         {
+            if (string.IsNullOrWhiteSpace(contentPath))
+                throw new ArgumentNullException(nameof(contentPath));
+
             if (contentPath.StartsWith("http"))
                 return contentPath;
 
             if (contentPath.StartsWith("~"))
                 return url.Content(contentPath);
 
-            throw new NotSupportedException($"{contentPath} string is not support.");
+            return contentPath;
         }
 
         /// <summary>
