@@ -23,6 +23,8 @@ Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Ci.Extension.ShareCode\Ci.Extension.ShareCode.projitems*{4ff838cb-ac69-4d93-b399-20e38e09ec55}*SharedItemsImports = 4
 		Ci.Extension.ShareCode\Ci.Extension.ShareCode.projitems*{7e6795ea-be76-4cde-9a84-7f58f0cbe4eb}*SharedItemsImports = 13
+		Ci.Extension.ShareCode\Ci.Extension.ShareCode.projitems*{b5486d11-de6c-42d7-a5c3-8bca2ea13636}*SharedItemsImports = 5
+		Ci.Extension.ShareCode\Ci.Extension.ShareCode.projitems*{f06fceac-f792-43f0-9170-6796663bf375}*SharedItemsImports = 5
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

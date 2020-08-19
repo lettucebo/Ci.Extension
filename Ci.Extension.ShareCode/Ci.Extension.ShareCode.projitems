@@ -9,6 +9,7 @@
     <Import_RootNamespace>Ci.Extension.ShareCode</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)ArrayExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)EnumExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ExtensionMethodSetting.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IListExtensions.cs" />
