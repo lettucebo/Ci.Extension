@@ -46,12 +46,12 @@ stages:
               packagesToPack: 'src\Ci.Extension.AspNetCore\Ci.Extension.AspNetCore.csproj'
               includeSymbols: true
 
-          # - task: NuGetCommand@2
-          #   displayName: "NuGet pack Ci.Extension.Core"
-          #   inputs:
-          #     command: pack
-          #     packagesToPack: 'src\Ci.Extension.Core\Ci.Extension.Core.csproj'
-          #     includeSymbols: true
+          - task: NuGetCommand@2
+            displayName: "NuGet pack Ci.Extension.Core"
+            inputs:
+              command: pack
+              packagesToPack: 'src\Ci.Extension.Core\Ci.Extension.Core.csproj'
+              includeSymbols: true
 
           - task: PublishBuildArtifacts@1
             inputs:
