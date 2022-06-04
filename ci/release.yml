@@ -79,9 +79,3 @@ stages:
               packagesToPush: '$(System.ArtifactsDirectory)/**/*.nupkg;!$(System.ArtifactsDirectory)/**/*.symbols.nupkg'
               nuGetFeedType: 'external'
               publishFeedCredentials: 'Nuget.org'
-
-          - task: PublishSymbols@2
-            displayName: "Publish symbols path"
-            inputs:
-              SearchPattern: "**/bin/**/*.pdb"
-              SymbolServerType: "TeamServices"
