@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
     <PropertyGroup>
         <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -8,6 +8,7 @@
         <PackageProjectUrl>https://github.com/lettucebo/Ci.Extension</PackageProjectUrl>
         <PackageIconUrl>https://i.imgur.com/3xZ4Cdx.png</PackageIconUrl>
         <Description>Collection of ASP.NET Core extension method.</Description>
+        <LangVersion>latest</LangVersion>
     </PropertyGroup>
 
 </Project>
