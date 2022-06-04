@@ -9,7 +9,9 @@
         <projectUrl>$PackageProjectUrl$</projectUrl>
         <iconUrl>$PackageIconUrl$</iconUrl>
         <dependencies>
-            <dependency id="System.ComponentModel.Annotations" version="5.0.0" />
+            <group targetFramework=".NETStandard2.0">
+                <dependency id="System.ComponentModel.Annotations" version="5.0.0" />
+            </group>
         </dependencies>
     </metadata>
 </package>
