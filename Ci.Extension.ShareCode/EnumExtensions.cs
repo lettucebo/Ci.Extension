@@ -176,17 +176,38 @@ namespace Ci.Extension
         }
 
         /// <summary>
-        /// Check the enum is define or not
+        /// Get enum value from description
         /// </summary>
-        /// <param name="description">The enum value.</param>
-        /// <param name="enumType">The enum Type.</param>
-        /// <returns>Enum description</returns>
-        public static Enum GetEnumFromDescription(this string description, Type enumType)
+        /// <typeparam name="T"></typeparam>
+        /// <param name="description">The enum description.</param>
+        /// <returns>The enum</returns>
+        public static T GetEnumFromDescription<T>(this string description) where T : Enum
         {
-            var result = Enum.GetValues(enumType)
-                .Cast<Enum>()
+            var result = Enum.GetValues(typeof(T))
+                .Cast<T>()
                 .FirstOrDefault(v => v.GetDescription() == description);
+            if (result == null)
+                return default;
             return result;
+        }
+
+        public static T GetEnumFromDisplayName<T>(this string name) where T : Enum
+        {
+            var type = typeof(T);
+
+            foreach (var field in type.GetFields())
+            {
+                if (Attribute.GetCustomAttribute(field, typeof(DisplayAttribute)) is DisplayAttribute attribute)
+                {
+                    if (attribute.Name == name)
+                        return (T)field.GetValue(null);
+                }
+
+                if (field.Name == name)
+                    return (T)field.GetValue(null);
+            }
+
+            return default;
         }
     }
 }

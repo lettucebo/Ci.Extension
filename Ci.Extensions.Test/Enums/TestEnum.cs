@@ -10,15 +10,15 @@ namespace Ci.Extensions.Test.Enums
 {
     public enum TestEnum
     {
-        [Display(Name = "One")]
+        [Display(Name = "One1")]
         [System.ComponentModel.Description("One")]
         First = 1,
 
-        [Display(Name = "Two")]
+        [Display(Name = "Two2")]
         [System.ComponentModel.Description("Two")]
         Second = 2,
 
-        [Display(Name = "Three")]
+        [Display(Name = "Three3")]
         [System.ComponentModel.Description("Three")]
         Third = 3,
     }
