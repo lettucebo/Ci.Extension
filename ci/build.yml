@@ -14,13 +14,16 @@ variables:
   BuildConfiguration: "Release"
 
 steps:
+  - task: UseDotNet@2
+    inputs:
+      packageType: 'sdk'
+      version: '3.1.x'
+
   - task: DotNetCoreCLI@2
     displayName: Restore
     inputs:
       command: "restore"
       projects: "**/*.sln"
-      feedsToUse: "select"
-      vstsFeed: "/fbe17587-989e-4bd3-9e5d-9bab3ce8a196"
 
   - task: DotNetCoreCLI@2
     displayName: Build
