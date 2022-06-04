@@ -9,7 +9,7 @@ namespace Ci.Extension
     public static class EnumExtensions
     {
         /// <summary>
-        /// Gets the Enum's description.
+        /// Gets the enum's description.
         /// </summary>
         /// <param name="value">The enum value.</param>
         /// <returns>Enum description</returns>
@@ -43,20 +43,20 @@ namespace Ci.Extension
         }
 
         /// <summary>
-        /// Convert string to Enum by attritube
+        /// Convert string to Enum by attribute
         /// </summary>
         /// <param name="value"></param>
-        /// <param name="attritubeType"></param>
+        /// <param name="attributeType"></param>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
-        /// <exception cref="ArgumentException">if transform attritube is not supported</exception>
+        /// <exception cref="ArgumentException">if transform attribute is not supported</exception>
         /// <exception cref="NotSupportedException"></exception>
         /// <exception cref="TargetException"></exception>
-        public static T ParseToEnumByAttritube<T>(this string value, string attritubeType = "DisplayName") where T : struct
+        public static T ParseToEnumByAttribute<T>(this string value, string attributeType = "DisplayName") where T : struct
         {
-            if (attritubeType != "DisplayName" && attritubeType != "Description")
+            if (attributeType != "DisplayName" && attributeType != "Description")
             {
-                throw new NotSupportedException($"{nameof(attritubeType)} currently only support DisplayName or Description");
+                throw new NotSupportedException($"{nameof(attributeType)} currently only support DisplayName or Description");
             }
 
             Type enumType = typeof(T);
@@ -65,7 +65,7 @@ namespace Ci.Extension
                 throw new InvalidOperationException("Only support for Enum parse");
             }
 
-            switch (attritubeType)
+            switch (attributeType)
             {
                 case "DisplayName":
                     return GetEnumByDisplayName<T>(value);
@@ -77,21 +77,21 @@ namespace Ci.Extension
         }
 
         /// <summary>
-        /// Try to convert string to Enum by attritube
+        /// Try to convert string to Enum by attribute
         /// </summary>
         /// <param name="value"></param>
-        /// <param name="attritubeType"></param>
+        /// <param name="attributeType"></param>
         /// <param name="result"></param>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
-        /// <exception cref="ArgumentException">if transform attritube is not supported</exception>
+        /// <exception cref="ArgumentException">if transform attribute is not supported</exception>
         /// <exception cref="NotSupportedException"></exception>
         /// <exception cref="TargetException"></exception>
-        public static bool TryParseToEnumByAttritube<T>(this string value, string attritubeType, out T result) where T : struct
+        public static bool TryParseToEnumByAttribute<T>(this string value, string attributeType, out T result) where T : struct
         {
-            if (attritubeType != "DisplayName" && attritubeType != "Description")
+            if (attributeType != "DisplayName" && attributeType != "Description")
             {
-                throw new NotSupportedException($"{nameof(attritubeType)} currently only support DisplayName or Description");
+                throw new NotSupportedException($"{nameof(attributeType)} currently only support DisplayName or Description");
             }
 
             Type enumType = typeof(T);
@@ -104,7 +104,7 @@ namespace Ci.Extension
 
             try
             {
-                switch (attritubeType)
+                switch (attributeType)
                 {
                     case "DisplayName":
                         result = GetEnumByDisplayName<T>(value);
@@ -163,6 +163,16 @@ namespace Ci.Extension
             }
 
             throw new ArgumentOutOfRangeException(nameof(value), "can not find match enum");
+        }
+
+        /// <summary>
+        /// Check the enum is define or not
+        /// </summary>
+        /// <param name="value">The enum value.</param>
+        /// <returns>Enum description</returns>
+        public static bool IsDefined(this Enum value)
+        {
+            return Enum.IsDefined(value.GetType(), value);
         }
     }
 }
