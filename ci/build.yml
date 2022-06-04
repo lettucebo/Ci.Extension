@@ -24,8 +24,6 @@ steps:
     inputs:
       command: "restore"
       projects: "**/*.sln"
-      feedsToUse: "select"
-      vstsFeed: "/fbe17587-989e-4bd3-9e5d-9bab3ce8a196"
 
   - task: DotNetCoreCLI@2
     displayName: Build
