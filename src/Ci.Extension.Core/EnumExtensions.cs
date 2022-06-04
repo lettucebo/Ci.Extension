@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Reflection;
 
-namespace Ci.Extension
+namespace Ci.Extension.Core
 {
     public static class EnumExtensions
     {

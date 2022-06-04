@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.AspNetCore.Http;
 
-namespace Ci.Extension.AspNetCore
+namespace Ci.Extension.AspNetCore3
 {
     public static class HttpContextExtension
     {

@@ -1,4 +1,4 @@
-using Ci.Extension;
+using Ci.Extension.Core;
 using Ci.Extensions.Test.Enums;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;

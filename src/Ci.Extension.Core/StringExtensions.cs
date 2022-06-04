@@ -2,7 +2,7 @@
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace Ci.Extension
+namespace Ci.Extension.Core
 {
     /// <summary>
     /// String Extensions

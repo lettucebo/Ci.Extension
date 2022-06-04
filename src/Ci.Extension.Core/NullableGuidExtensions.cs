@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Ci.Extension
+namespace Ci.Extension.Core
 {
     public static class NullableGuidExtensions
     {

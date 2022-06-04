@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Reflection;
 
-namespace Ci.Extension
+namespace Ci.Extension.Core
 {
     public static class IListExtensions
     {
