@@ -1,9 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
     <PropertyGroup>
-        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <TargetFramework>net5.0</TargetFramework>
         <OutputType>Library</OutputType>
-        <Version>3.1.0</Version>
+        <Version>5.0.0</Version>
         <Authors>Money Yu</Authors>
         <PackageProjectUrl>https://github.com/lettucebo/Ci.Extension</PackageProjectUrl>
         <PackageIconUrl>https://i.imgur.com/3xZ4Cdx.png</PackageIconUrl>
