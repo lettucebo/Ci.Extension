@@ -75,11 +75,10 @@ stages:
           - task: NuGetCommand@2
             displayName: "Push to Azure Artifact"
             inputs:
-              command: "push"
-              packagesToPush: "$(System.ArtifactsDirectory)/**/*.nupkg;!$(System.ArtifactsDirectory)/**/*.symbols.nupkg"
-              nuGetFeedType: "internal"
-              publishVstsFeed: ""
-              allowPackageConflicts: true
+              command: 'push'
+              packagesToPush: '$(System.ArtifactsDirectory)/**/*.nupkg;!$(System.ArtifactsDirectory)/**/*.symbols.nupkg'
+              nuGetFeedType: 'external'
+              publishFeedCredentials: 'Nuget.org'
 
           - task: PublishSymbols@2
             displayName: "Publish symbols path"
