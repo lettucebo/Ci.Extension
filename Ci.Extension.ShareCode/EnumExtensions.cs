@@ -174,5 +174,19 @@ namespace Ci.Extension
         {
             return Enum.IsDefined(value.GetType(), value);
         }
+
+        /// <summary>
+        /// Check the enum is define or not
+        /// </summary>
+        /// <param name="description">The enum value.</param>
+        /// <param name="enumType">The enum Type.</param>
+        /// <returns>Enum description</returns>
+        public static Enum GetEnumFromDescription(this string description, Type enumType)
+        {
+            var result = Enum.GetValues(enumType)
+                .Cast<Enum>()
+                .FirstOrDefault(v => v.GetDescription() == description);
+            return result;
+        }
     }
 }

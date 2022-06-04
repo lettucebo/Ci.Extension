@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.28729.10
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32519.379
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ci.Extension", "Ci.Extension\Ci.Extension.csproj", "{4FF838CB-AC69-4D93-B399-20E38E09EC55}"
 EndProject
@@ -19,13 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ci.Extension.CoreApp", "Ci.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ci.Extension.AspNetCore", "Ci.Extension.AspNetCore\Ci.Extension.AspNetCore.csproj", "{D0A7FEA6-1144-41CC-8591-749393B2A3F1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ci.Extensions.Test", "Ci.Extensions.Test\Ci.Extensions.Test.csproj", "{07084094-D3C8-4B3F-82A5-A71935F492D6}"
+EndProject
 Global
-	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		Ci.Extension.ShareCode\Ci.Extension.ShareCode.projitems*{4ff838cb-ac69-4d93-b399-20e38e09ec55}*SharedItemsImports = 4
-		Ci.Extension.ShareCode\Ci.Extension.ShareCode.projitems*{7e6795ea-be76-4cde-9a84-7f58f0cbe4eb}*SharedItemsImports = 13
-		Ci.Extension.ShareCode\Ci.Extension.ShareCode.projitems*{b5486d11-de6c-42d7-a5c3-8bca2ea13636}*SharedItemsImports = 5
-		Ci.Extension.ShareCode\Ci.Extension.ShareCode.projitems*{f06fceac-f792-43f0-9170-6796663bf375}*SharedItemsImports = 5
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -59,11 +55,21 @@ Global
 		{D0A7FEA6-1144-41CC-8591-749393B2A3F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0A7FEA6-1144-41CC-8591-749393B2A3F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0A7FEA6-1144-41CC-8591-749393B2A3F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07084094-D3C8-4B3F-82A5-A71935F492D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07084094-D3C8-4B3F-82A5-A71935F492D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07084094-D3C8-4B3F-82A5-A71935F492D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07084094-D3C8-4B3F-82A5-A71935F492D6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E1D51D19-3B98-4A37-AAA2-9DF7B7B939D0}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Ci.Extension.ShareCode\Ci.Extension.ShareCode.projitems*{4ff838cb-ac69-4d93-b399-20e38e09ec55}*SharedItemsImports = 4
+		Ci.Extension.ShareCode\Ci.Extension.ShareCode.projitems*{7e6795ea-be76-4cde-9a84-7f58f0cbe4eb}*SharedItemsImports = 13
+		Ci.Extension.ShareCode\Ci.Extension.ShareCode.projitems*{b5486d11-de6c-42d7-a5c3-8bca2ea13636}*SharedItemsImports = 5
+		Ci.Extension.ShareCode\Ci.Extension.ShareCode.projitems*{f06fceac-f792-43f0-9170-6796663bf375}*SharedItemsImports = 5
 	EndGlobalSection
 EndGlobal
