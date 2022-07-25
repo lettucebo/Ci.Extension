@@ -7,7 +7,6 @@
         <owners>$authors$</owners>
         <description>$description$</description>
         <projectUrl>$PackageProjectUrl$</projectUrl>
-        <packageProjectUrl>$PackageProjectUrl$</packageProjectUrl>
         <iconUrl>$PackageIconUrl$</iconUrl>
         <dependencies>
             <group targetFramework="net6.0" />
