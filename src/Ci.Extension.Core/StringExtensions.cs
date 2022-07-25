@@ -214,7 +214,7 @@ namespace Ci.Extension.Core
         }
 
         /// <summary>
-        /// SubString and check  length is enough, if not retrun full string
+        /// SubString and check length is enough, if not return the rest full string
         /// </summary>
         /// <param name="source"></param>
         /// <param name="startIndex"></param>
@@ -223,6 +223,17 @@ namespace Ci.Extension.Core
         public static string SubStringLength(this string source, int startIndex, int length)
         {
             return source.Substring(startIndex, Math.Min(source.Length - startIndex, length));
+        }
+
+        /// <summary>
+        /// SubString to the end
+        /// </summary>
+        /// <param name="source"></param>
+        /// <param name="length"></param>
+        /// <returns></returns>
+        public static string SubStringToEnd(this string source, int length)
+        {
+            return source.Substring(source.Length - length);
         }
 
         /// <summary>
@@ -247,6 +258,26 @@ namespace Ci.Extension.Core
         public static string Remove(this string source, string removeStr)
         {
             return source.Replace(removeStr, string.Empty);
+        }
+
+        /// <summary>
+        /// Returns null if string is null/empty/whitespace else same string.
+        /// </summary>
+        public static string NullIfWhiteSpace(this string source)
+        {
+            return !source.IsNullOrWhiteSpace() ? source : null;
+        }
+
+        /// <summary>
+        /// Returns substring from start of length <paramref name="length"/>.
+        /// </summary>
+        public static string SubstringFromStart(this string source, int length)
+        {
+            if (length >= source.Length)
+            {
+                return source;
+            }
+            return source.Substring(0, length);
         }
     }
 }
