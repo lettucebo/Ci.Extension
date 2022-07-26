@@ -34,11 +34,6 @@ stages:
               projects: "**/*.sln"
               arguments: "--configuration $(BuildConfiguration)"
 
-          - task: NuGetToolInstaller@1
-            displayName: "Use NuGet 5.2.0"
-            inputs:
-              versionSpec: "5.2.x"
-
           - task: NuGetCommand@2
             displayName: "NuGet pack Ci.Extension.AspNetCore"
             inputs:
@@ -79,3 +74,4 @@ stages:
               packagesToPush: '$(System.ArtifactsDirectory)/**/*.nupkg;!$(System.ArtifactsDirectory)/**/*.symbols.nupkg'
               nuGetFeedType: 'external'
               publishFeedCredentials: 'Nuget.org'
+              allowPackageConflicts: true
