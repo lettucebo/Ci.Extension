@@ -35,7 +35,7 @@ stages:
               arguments: "--configuration $(BuildConfiguration)"
 
           - task: NuGetToolInstaller@1
-            displayName: "Use NuGet 5.2.0"
+            displayName: "Use NuGet 5.x.x"
             inputs:
               versionSpec: "5.x.x"
 
