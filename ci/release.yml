@@ -63,7 +63,7 @@ stages:
     jobs:
       - job: Depoly
         pool:
-          vmImage: "windows-latest"
+          vmImage: "ubuntu-latest"
         steps:
           - task: DownloadBuildArtifacts@0
             inputs:
