@@ -73,10 +73,9 @@ stages:
               downloadPath: "$(System.ArtifactsDirectory)"
 
           - task: NuGetCommand@2
-            displayName: "Push to Azure Artifact"
+            displayName: 'Push to Nuget'
             inputs:
               command: 'push'
-              packagesToPush: '$(System.ArtifactsDirectory)/**/*.nupkg;!$(System.ArtifactsDirectory)/**/*.symbols.nupkg'
+              packagesToPush: '$(Build.ArtifactsDirectory)/**/*.nupkg;!$(Build.ArtifactsDirectory)/**/*.symbols.nupkg'
               nuGetFeedType: 'external'
               publishFeedCredentials: 'Nuget.org'
-              allowPackageConflicts: true
