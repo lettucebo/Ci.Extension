@@ -3,7 +3,7 @@
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
         <OutputType>Library</OutputType>
-        <Version>6.0.1</Version>
+        <Version>6.0.3</Version>
         <Authors>Money Yu</Authors>
         <PackageProjectUrl>https://github.com/lettucebo/Ci.Extension</PackageProjectUrl>
         <PackageIconUrl>https://i.imgur.com/3xZ4Cdx.png</PackageIconUrl>

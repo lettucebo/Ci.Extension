@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
-        <Version>6.0.2</Version>
+        <Version>6.0.3</Version>
         <Authors>Money Yu</Authors>
         <PackageProjectUrl>https://github.com/lettucebo/Ci.Extension</PackageProjectUrl>
         <PackageIconUrl>https://i.imgur.com/3xZ4Cdx.png</PackageIconUrl>
