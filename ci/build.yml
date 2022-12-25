@@ -41,6 +41,8 @@ steps:
       projects: "**/*[Tt]est/*.csproj"
       arguments: "--configuration $(BuildConfiguration) --no-restore"
 
+  
+
   - task: SonarCloudAnalyze@1
 
   - task: SonarCloudPublish@1
