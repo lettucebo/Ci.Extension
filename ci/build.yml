@@ -4,8 +4,13 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
 
 trigger:
-  - dev
-  - master
+  batch: true
+  branches:
+    include:
+      - '*'
+  paths:
+    include:
+      - src/*
 
 pool:
   vmImage: "ubuntu-22.04"
@@ -41,7 +46,10 @@ steps:
       projects: "**/*[Tt]est/*.csproj"
       arguments: "--configuration $(BuildConfiguration) --no-restore"
 
-  
+  - task: WhiteSource@21
+    inputs:
+      cwd: '$(System.DefaultWorkingDirectory)'
+      projectName: 'Ci.Extension'
 
   - task: SonarCloudAnalyze@1
 
